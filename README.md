@@ -2,15 +2,6 @@
 
 This repository contains a LaTeX resume template that is automatically compiled into a PDF on every push using GitHub Actions.
 
-## Features
-
-- **Clean & Modern Template**: A professional, one-page resume template.
-
-- **Automated Builds**: The PDF is built automatically every time you push to the `main` branch.
-
-- **No Local LaTeX Required**: The build happens in a Docker container, so you don't need a local TeX Live installation to get the final PDF.
-
-- **Downloadable Artifact**: The compiled `resume.pdf` is available as a downloadable artifact from the "Actions" tab.
 
 ## How to Use
 
