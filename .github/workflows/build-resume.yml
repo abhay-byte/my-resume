@@ -1,15 +1,15 @@
 # .github/workflows/auto-release-on-commit.yml
 
-name: Auto-Release Resume on Commit
+name: Auto-Release LaTeX Documents on Commit
 
 on:
   push:
     branches:
       - main
       - master
-    # Only run the workflow if the resume.tex file was changed
+    # Trigger the workflow if any .tex file is changed or added anywhere in the repo
     paths:
-      - 'resume.tex'
+      - '**.tex'
   
   # Also allow manual trigger for convenience
   workflow_dispatch:
@@ -26,30 +26,44 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      # Step 2: Compile the LaTeX file to produce the PDF
-      - name: Compile LaTeX to PDF
+      # Step 2: Compile all .tex files in the root directory to PDF
+      # Each PDF will be named using the current date and the original TeX filename.
+      # e.g., resume.tex becomes YYYY-MM-DD-resume.pdf
+      - name: Compile all LaTeX files to PDF
         run: |
-          docker run --rm --user="$(id -u):$(id -g)" --net=none -v "${{ github.workspace }}:/data" leplusorg/latex latexmk -outdir=/data -pdf /data/resume.tex
+          # Find all .tex files in the root directory.
+          # Note: We use -maxdepth 1 to avoid compiling included sub-files as standalone documents.
+          # If you have main .tex files in subdirectories you want to compile, remove '-maxdepth 1'.
+          find . -maxdepth 1 -name "*.tex" -print0 | while IFS= read -r -d $'\0' texfile; do
+            BASENAME=$(basename "$texfile" .tex)
+            OUTPUT_NAME="$(date +'%Y-%m-%d')-${BASENAME}"
+            echo "--- Compiling ${texfile} to ${OUTPUT_NAME}.pdf ---"
+            
+            docker run --rm --user="$(id -u):$(id -g)" --net=none -v "${{ github.workspace }}:/data" leplusorg/latex \
+              latexmk -outdir=/data -pdf -jobname="${OUTPUT_NAME}" "/data/${texfile}"
+            
+            echo "--- Finished compiling ${OUTPUT_NAME}.pdf ---"
+          done
 
-      # Step 3: Generate a date-based tag name
+      # Step 3: Generate a unique, date-based tag name for the release
       # Format: vYYYY.MM.DD.HHMMSS (e.g., v2024.05.16.143055)
       - name: Generate date-based tag
         id: generate_tag
         run: echo "TAG_NAME=v$(date +'%Y.%m.%d.%H%M%S')" >> $GITHUB_ENV
 
-      # Step 4: Create the GitHub Release and upload the PDF
+      # Step 4: Create the GitHub Release and upload all generated PDFs
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           # Use the tag generated in the previous step
           tag_name: ${{ env.TAG_NAME }}
-          # Name the release clearly
-          name: "Resume - ${{ env.TAG_NAME }}"
-          # The file(s) to upload as release assets
-          files: resume.pdf
+          # A more generic name for the release
+          name: "LaTeX Documents - ${{ env.TAG_NAME }}"
+          # Use a wildcard to find and upload all PDF files in the root directory
+          files: "*.pdf"
           # A description for the release, linking back to the commit
           body: |
-            Automatic release of the latest resume.
+            Automatic release of the latest LaTeX documents.
             Compiled from commit: `${{ github.sha }}`
           # We want this to be a final release, not a draft or prerelease
           draft: false

@@ -1,0 +1,164 @@
+%------------------------- 
+% Resume in Latex 
+% Author  : Jake Gutierrez (template) | Updated by Abhay Raj
+%------------------------- 
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{} 
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure generated PDF is ATS-friendly
+\pdfgentounicode=1
+
+%------------------------- 
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small #1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} 
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%%%%%%%%%% RESUME STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  \textbf{\Huge \scshape Abhay Raj} \\ \vspace{1pt}
+  \small 8178339741 $|$ \href{mailto:abhay.byte02@gmail.com}{\underline{abhay.byte02@gmail.com}} $|$
+  \href{https://linkedin.com/in/abhay-byte}{\underline{linkedin.com/in/abhay-byte}} $|$
+  \href{https://abhayraj-portfolio.web.app}{\underline{abhayraj-portfolio.web.app}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\resumeSubHeadingListStart
+  \resumeItem{Detail-oriented \textbf{Software Engineer} with 2+ years of experience in full-stack \textbf{software development}, specializing in scalable web applications and \textbf{system design}. Proficient in applying \textbf{agile methodologies} for rapid development cycles and demonstrating strong \textbf{problem-solving} skills. Committed to writing high-quality code, \textbf{performance optimization}, and contributing to impactful open-source projects.}
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Guru Tegh Bahadur Institute of Technology}{New Delhi, IN}
+    {B.Tech Information Technology}{November 2022 -- May 2026 (Expected)}
+    \resumeSubItem{Current Percentage: 80.65\%}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Gamified}{Remote}
+    {Game Developer (Intern)}{July 2023 -- September 2023}
+    \resumeItemListStart
+      \resumeItem{Engineered and implemented user interfaces for \textbf{10+} game scenes, performing rigorous \textbf{debugging} to ensure 100\% design accuracy and reducing iteration time by \textbf{25\%}.}
+      \resumeItem{Executed \textbf{performance optimization} by refactoring core game mechanics into modular components, simplifying the \textbf{software architecture} and cutting code complexity by \textbf{20\%}.}
+      \resumeItem{Authored \textbf{technical documentation} for UI components and gameplay mechanics, improving knowledge sharing and onboarding for the design team.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+    \resumeSubheading{\href{https://aiwrapper.streamlit.app/}{\textbf{Investment Growth Prediction}}}{April 2024 -- May 2024}
+    {\emph{Python, Streamlit, Plotly, Machine Learning (GenAI)}}{ }
+  \resumeItemListStart
+    \resumeItem{Developed an interactive dashboard simulating portfolio growth, leveraging \textbf{data visualization} with Plotly.}
+    \resumeItem{Integrated \textbf{machine learning} (GenAI) to generate personalized investment summaries, automating \textbf{data analysis} and reducing manual effort by \textbf{70\%}.}
+    \resumeItem{Provided downloadable CSV reports, contributing to a user retention rate of \textbf{60\%}.}
+  \resumeItemListEnd
+
+  \resumeSubheading{\href{https://github.com/abhay-byte/task_management_tool}{\textbf{Task.Web.App}}}{March 2024 -- April 2024}
+  {\emph{React, Node.js, Express.js, MongoDB, Material-UI, GCP}}{}
+  \resumeItemListStart
+    \resumeItem{Applied \textbf{agile methodologies} in the \textbf{system design} and development of a full-stack task-management platform for \textbf{25+} concurrent users.}
+    \resumeItem{Led backend \textbf{API development}, implementing JWT authentication and role-based access control based on \textbf{security best practices} to prevent unauthorized access.}
+    \resumeItem{Designed and managed the MongoDB \textbf{database schema} to ensure data integrity and achieve an average API response time of under \textbf{150 ms}.}
+  \resumeItemListEnd
+
+  \resumeSubheading{\href{https://github.com/abhay-byte/fb_nextjs}{\textbf{Finalbenchmark}}}{September 2023 -- November 2023}
+  {\emph{Next.js, PostgreSQL, TailwindCSS, Vercel, AWS}}{}
+  \resumeItemListStart
+    \resumeItem{Designed the \textbf{software architecture} for a data-driven platform aggregating \textbf{100+} smartphone SoC profiles and \textbf{2K+} benchmark records.}
+    \resumeItem{Optimized PostgreSQL queries for efficient \textbf{database management}, improving data retrieval speeds by \textbf{5x} to under \textbf{300 ms}.}
+    \resumeItem{Implemented \textbf{DevOps practices} by establishing a \textbf{continuous integration} (CI/CD) pipeline; led code reviews and enforced \textbf{unit testing} to maintain \textbf{90\%} test coverage.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% ----------- ACHIEVEMENTS -----------
+\section{Achievements}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{\href{https://leetcode.com/u/abhay-byte/}{LeetCode}:} Solved \textbf{100+} challenges, demonstrating strong \textbf{algorithm design} and \textbf{problem-solving} skills.}
+  \resumeItem{\textbf{\href{https://play.google.com/store/apps/dev?id=8004929841101888920}{Google Play}:} Proved expertise in \textbf{mobile development} by publishing \textbf{5} Android apps, reaching \textbf{25,000+} installs.}
+  \resumeItem{\textbf{\href{https://github.com/abhay-byte/}{GitHub}:} Managed code and contributions across \textbf{12} active repositories using Git for \textbf{version control}.}
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{Languages}: Python, JavaScript, Java, C++, SQL, C, C\#, HTML5/CSS3}
+  \resumeItem{\textbf{Frameworks \& Libraries}: React.js, Next.js, Node.js, Express.js, Tailwind CSS, Material-UI, NumPy, Pandas, Plotly, Spring}
+  \resumeItem{\textbf{Databases}: MongoDB, PostgreSQL, MySQL}
+  \resumeItem{\textbf{Cloud \& DevOps}: AWS (EC2, S3), GCP (Compute Engine), Vercel, Docker, Git, CI/CD, Kubernetes}
+  \resumeItem{\textbf{Methodologies \& Practices}: Agile Methodologies, System Design, Software Architecture, RESTful API Development, Unit Testing, Security Best Practices, Cross-Platform Development}
+  \resumeItem{\textbf{Developer Tools}: JetBrains Suite, Neovim, WSL, Nano}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
