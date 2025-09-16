@@ -1,7 +1,7 @@
-%------------------------- 
-% Resume in Latex 
+%-------------------------
+% Resume in Latex
 % Author  : Jake Gutierrez (template) | Updated by Abhay Raj
-%------------------------- 
+%-------------------------
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -17,8 +17,8 @@
 \usepackage{tabularx}
 
 \pagestyle{fancy}
-\fancyhf{} 
-\fancyfoot{} 
+\fancyhf{}
+\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -42,7 +42,7 @@
 % Ensure generated PDF is ATS-friendly
 \pdfgentounicode=1
 
-%------------------------- 
+%-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{#1 \vspace{-2pt}}
@@ -68,7 +68,7 @@
 }
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} 
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -82,13 +82,14 @@
   \textbf{\Huge \scshape Abhay Raj} \\ \vspace{1pt}
   \small 8178339741 $|$ \href{mailto:abhay.byte02@gmail.com}{\underline{abhay.byte02@gmail.com}} $|$
   \href{https://linkedin.com/in/abhay-byte}{\underline{linkedin.com/in/abhay-byte}} $|$
+  \href{https://github.com/abhay-byte}{\underline{github.com/abhay-byte}} $|$
   \href{https://abhayraj-porfolio.web.app}{\underline{abhayraj-porfolio.web.app}}
 \end{center}
 
 %-----------SUMMARY-----------
 \section{Summary}
 \resumeSubHeadingListStart
-  \resumeItem{Developed production-ready web and mobile applications for \textbf{2,000+} users. Contributed to open-source projects, resolved software defects, and rapidly learned new technologies to address business needs.}
+  \resumeItem{Aspiring Full-Stack Developer with hands-on experience in building and deploying scalable web and mobile applications using Python, Java, and JavaScript. Proficient in front-end and back-end development, RESTful APIs, and database management. Proven ability to quickly learn and apply new technologies to solve complex problems and contribute to the full software development life cycle.}
 \resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------
@@ -96,66 +97,75 @@
 \resumeSubHeadingListStart
   \resumeSubheading
     {Guru Tegh Bahadur Institute of Technology}{New Delhi, IN}
-    {B.Tech Information Technology}{Nov. 2022 -- May 2026}
+    {B.Tech in Information Technology}{Nov 2022 -- May 2026}
     \resumeSubItem{Current Percentage: 80.65\%}
-\resumeSubHeadingListEnd
-%-----------EXPERIENCE-----------
-\section{Experience}
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Gamified}{Jul 2023 -- Sep 2023}
-    {Game Developer}{}
-    \resumeItemListStart
-      \resumeItem{Built user interfaces for \textbf{10+} game scenes with \textbf{100\%} design accuracy, reducing iteration time by \textbf{25\%}.}
-      \resumeItem{Refactored core mechanics into modular components, cutting code complexity by \textbf{20\%}.}
-      \resumeItem{Coordinated with \textbf{2} artists/designers to align assets with gameplay.}
-    \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
-  \resumeProjectHeading{\href{https://aiwrapper.streamlit.app/}{\small\textbf{Investment Growth Prediction} $|$ \emph{Python, Streamlit, Plotly, GenAI}}}{Apr 2025 -- May 2025}
-  \resumeItemListStart
-    \resumeItem{Developed an interactive dashboard simulating \textbf{10-year} portfolio growth scenarios based on user input.}
-    \resumeItem{Integrated GenAI to generate personalized investment summaries, reducing manual analysis time by \textbf{70\%}.}
-    \resumeItem{Provided downloadable CSV reports and Plotly charts, increasing user retention to \textbf{60\%}.}
-  \resumeItemListEnd
+    \resumeProjectHeading{\href{https://github.com/abhay-byte/cura-backend}{\small\textbf{CURA - AI Health Agents Backend}} $|$ \emph{Python, Django, Flask, RESTful APIs, PostgreSQL}}{}
+    \resumeItemListStart
+        \resumeItem{Engineered a scalable backend system with a microservices architecture to power intelligent health agents for medication reminders and personalized diet planning.}
+        \resumeItem{Developed and integrated two distinct AI agents using Django and Flask, ensuring seamless communication and data handling.}
+        \resumeItem{Designed and implemented a robust PostgreSQL database schema and RESTful API endpoints for efficient data management and front-end integration.}
+    \resumeItemListEnd
 
-  \resumeProjectHeading{\href{https://github.com/abhay-byte/task_management_tool}{\small\textbf{Task.Web.App} $|$ \emph{MERN, MUI, GCP}}}{Mar 2025 -- Apr 2025}
-  \resumeItemListStart
-    \resumeItem{Engineered a task-management platform for \textbf{25+} users, enabling tracking of \textbf{100+} tasks with an average response time under \textbf{150 ms}.}
-    \resumeItem{Implemented JWT authentication and role-based access control, eliminating unauthorized access incidents.}
-    \resumeItem{Visualized weekly and monthly completion rates with interactive charts, increasing user engagement by \textbf{25\%}.}
-  \resumeItemListEnd
+    \resumeProjectHeading{\href{https://aiwrapper.streamlit.app/}{\small\textbf{Investment Growth Prediction}} $|$ \emph{Python, Streamlit, Plotly, GenAI}}{Apr 2025 -- May 2025}
+    \resumeItemListStart
+        \resumeItem{Developed an interactive dashboard to simulate 10-year portfolio growth scenarios, leveraging Python and Streamlit for a responsive user interface.}
+        \resumeItem{Integrated Google's GenAI to generate personalized investment summaries, reducing manual analysis time by over 70\%.}
+        \resumeItem{Implemented data visualization using Plotly charts and provided downloadable CSV reports, enhancing user engagement.}
+    \resumeItemListEnd
+    
+    \resumeProjectHeading{\href{https://github.com/abhay-byte/task_management_tool}{\small\textbf{Task.Web.App}} $|$ \emph{MERN Stack (MongoDB, Express.js, React, Node.js), GCP}}{Mar 2025 -- Apr 2025}
+    \resumeItemListStart
+        \resumeItem{Architected and deployed a full-stack task management platform on Google Cloud Platform, serving over 25 users to track 100+ tasks with an average response time under 150 ms.}
+        \resumeItem{Implemented JWT authentication and role-based access control to secure application endpoints and protect user data.}
+        \resumeItem{Utilized React and Material-UI to create a dynamic front-end with interactive charts for visualizing task completion rates.}
+    \resumeItemListEnd
 
-  \resumeProjectHeading{\href{https://github.com/abhay-byte/fb_nextjs}{\small\textbf{Finalbenchmark} $|$ \emph{Next.js, PostgreSQL, TailwindCSS, Vercel, AWS}}}{Sep 2024 -- Nov 2024}
-  \resumeItemListStart
-    \resumeItem{Built a data-driven site aggregating \textbf{100+} smartphone SoC profiles and \textbf{2K+} benchmark records for side-by-side comparison.}
-    \resumeItem{Enabled users to view detailed SoC specifications, compare different SoCs, and check performance ratings}
-    \resumeItem{Optimized PostgreSQL queries to deliver comparison results.}
-  \resumeItemListEnd
+    \resumeProjectHeading{\href{https://github.com/abhay-byte/fb_nextjs}{\small\textbf{Finalbenchmark}} $|$ \emph{Next.js, PostgreSQL, TailwindCSS, Vercel, AWS}}{Sep 2024 -- Nov 2024}
+    \resumeItemListStart
+        \resumeItem{Built a data-driven website aggregating over 100 smartphone SoC profiles and 2,000+ benchmark records for side-by-side comparisons.}
+        \resumeItem{Designed and optimized PostgreSQL queries to deliver comparison results with low latency, enhancing user experience.}
+        \resumeItem{Deployed the application using Vercel and managed database resources on AWS, ensuring high availability.}
+    \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
-% ----------- ACHIEVEMENTS -----------
-\section{Achievements}
+%-----------EXPERIENCE-----------
+\section{Experience}
 \resumeSubHeadingListStart
-  \resumeItem{\textbf{\href{https://leetcode.com/u/abhay-byte/}{LeetCode}:} Solved over \textbf{135+} questions, earned a \textbf{50-day} streak badge, and maintained a \textbf{1409} rating.}
-  \resumeItem{\textbf{\href{https://play.google.com/store/apps/dev?id=8004929841101888920&hl=en_US&gl=US}{Google Play}:} Published \textbf{5} Android apps, accumulating \textbf{25,000+} installs and a \textbf{4.2/5} average rating from \textbf{200} reviews.}
-  \resumeItem{\textbf{\href{https://github.com/abhay-byte/}{GitHub}:} Maintained a \textbf{60-day} streak with over \textbf{900} commits and \textbf{70} merged PRs across \textbf{12} active repositories.}
+    \resumeSubheading
+    {Gamified}{Jul 2023 -- Sep 2023}
+    {Game Developer Intern}{}
+    \resumeItemListStart
+        \resumeItem{Developed and implemented user interfaces for over 10 game scenes with 100\% design accuracy using C\# and Unity, reducing iteration time by 25\%.}
+        \resumeItem{Refactored core game mechanics into modular, reusable components, improving code maintainability and reducing complexity by 20\%.}
+        \resumeItem{Collaborated with a team of artists and designers to integrate assets and ensure alignment with gameplay requirements.}
+    \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
 \resumeSubHeadingListStart
-  \resumeItem{\textbf{Programming Languages}: HTML5, CSS3, JavaScript, SQL, Python, Java, C, C++, C\#} \\
-  \resumeItem{\textbf{Web Technologies}: Git, RESTful APIs, MySQL, Tailwind, Material-UI, React.js, Next.js, Express.js, Node.js, MongoDB, PostgreSQL} \\
-  \resumeItem{\textbf{Developer Tools}: Nano, Docker, Neovim, JetBrains WebStorm, WSL} \\
-  \resumeItem{\textbf{Data Science}: NumPy, Pandas, Matplotlib, Seaborn, Plotly} \\
-  \resumeItem{\textbf{Cloud}: AWS (EC2, S3, VPC, ECS, Amplify), GCP (Compute Engine, App Engine, Cloud Storage), Vercel, Render} \\
-  \resumeItem{\textbf{Artificial Intelligence}: Gemini, Google GenAI} \\
-  \resumeItem{\textbf{Other}: \href{https://github.com/abhay-byte/DSA_Practice}{Data Structures and Algorithms}} 
+  \resumeItem{\textbf{Programming Languages}: Python, Java, JavaScript, C++, SQL, C\#, HTML5, CSS3}
+  \resumeItem{\textbf{Backend}: Node.js, Express.js, Django, Flask, RESTful APIs}
+  \resumeItem{\textbf{Frontend}: React, Next.js, HTML5, CSS3, Material-UI, TailwindCSS}
+  \resumeItem{\textbf{Databases}: MySQL, MongoDB, PostgreSQL, NoSQL}
+  \resumeItem{\textbf{Cloud \& DevOps}: AWS (EC2, S3), GCP, Docker, Git, Vercel}
+  \resumeItem{\textbf{Developer Tools}: JetBrains Suite (IntelliJ, WebStorm), Neovim, VS Code, WSL}
+  \resumeItem{\textbf{AI/ML}: Google GenAI, Pandas, NumPy, Scikit-learn}
+  \resumeItem{\textbf{Problem Solving}: \href{https://github.com/abhay-byte/DSA_Practice}{Data Structures and Algorithms}}
+\resumeSubHeadingListEnd
+
+% ----------- ACHIEVEMENTS -----------
+\section{Achievements}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{\href{https://leetcode.com/u/abhay-byte/}{LeetCode}:} Solved 135+ problems focusing on Data Structures and Algorithms.}
+  \resumeItem{\textbf{\href{https://play.google.com/store/apps/dev?id=8004929841101888920&hl=en_US&gl=US}{Google Play}:} Published 5 Android applications, achieving over 25,000 installs and a 4.2/5 average rating.}
+  \resumeItem{\textbf{\href{https://github.com/abhay-byte/}{GitHub}:} Active open-source contributor with 900+ commits and 70+ merged pull requests across 12 repositories.}
 \resumeSubHeadingListEnd
 
 %-------------------------------------------
