@@ -1,0 +1,163 @@
+%-------------------------
+% Resume in Latex - Tailored for Apple ASE (Storage Infrastructure & Reliability)
+% Based on Jake Gutierrez template | Tailored by Abhay Raj
+%-------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure generated PDF is ATS-friendly
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small #1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%%%%%%%%%% RESUME STARTS HERE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  \textbf{\Huge \scshape Abhay Raj} \\ \vspace{1pt}
+  \small 8178339741 $|$ \href{mailto:abhay.byte02@gmail.com}{\underline{abhay.byte02@gmail.com}} $|$
+  \href{https://linkedin.com/in/abhay-byte}{\underline{linkedin.com/in/abhay-byte}} $|$
+  \href{https://github.com/abhay-byte}{\underline{github.com/abhay-byte}} $|$
+  \href{https://abhay-byte.web.app/}{\underline{abhay-byte.web.app}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\resumeSubHeadingListStart
+  \resumeItem{Software engineer with hands-on experience building backend services, containerized applications, and Linux-based developer tooling. Open-source contributor with 84 public repositories and 2.6K+ commits. Strong foundation in data structures and algorithms with 150+ LeetCode problems solved. Driven by infrastructure engineering, distributed systems, and building reliable software that serves users at scale.}
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{Languages}: Go, Python, Java, Kotlin, TypeScript, JavaScript, C++, Shell, SQL}
+  \resumeItem{\textbf{Infrastructure \& DevOps}: Linux Administration, Docker, Git, GitHub Actions, CI/CD, AWS, GCP}
+  \resumeItem{\textbf{Data \& Algorithms}: Data Structures, Algorithms, Problem Solving, Design Patterns, Performance Optimization}
+  \resumeItem{\textbf{Development Practices}: Backend Architecture, API Design, Distributed Systems, System Reliability, Automation, Code Review}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+    \resumeSubheading
+    {Avalon Information Systems}{Jan 2026 -- Jun 2026}
+    {Backend Developer}{New Delhi, IN}
+    \resumeItemListStart
+        \resumeItem{Built and optimized scalable backend services using \textbf{PHP (Laravel \& CakePHP)} for OpenEMIS — an open-source Education Management System deployed at national scale across multiple countries.}
+        \resumeItem{Designed modular backend architecture handling large-scale data pipelines, concurrent user requests, and distributed deployment configurations ensuring high reliability.}
+        \resumeItem{Collaborated with a global team to improve system performance, reduce latency, and enhance data processing throughput for government-level education deployments.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Gamified}{Jul 2023 -- Sep 2023}
+    {Game Developer Intern}{Remote}
+    \resumeItemListStart
+        \resumeItem{Developed interactive systems for 10+ game scenes using \textbf{C\# and Unity}, achieving 100\% implementation accuracy and reducing iteration cycles by 25\%.}
+        \resumeItem{Refactored monolithic logic into modular, reusable component architecture — improving code maintainability and reducing system complexity by 20\%.}
+        \resumeItem{Integrated cross-functional assets into a cohesive runtime environment, ensuring alignment across product, design, and engineering requirements.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+    \resumeProjectHeading{\href{https://github.com/abhay-byte/fluxlinux}{\small\textbf{fluxlinux}} $|$ \emph{Kotlin / Linux}}{}
+    \resumeItemListStart
+        \resumeItem{Built a \textbf{Linux environment manager} for Android enabling seamless developer tooling directly on mobile devices with automated provisioning and shell integration — 80 GitHub stars.}
+        \resumeItem{Integrated cross-process communication, automated package management, and containerized tool environments for portable development workflows.}
+        \resumeItem{Leveraged \textbf{Linux system internals, process management, and filesystem operations} to create a reliable runtime environment on constrained mobile hardware.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading{\href{https://github.com/abhay-byte/finalbenchmark-platform}{\small\textbf{finalbenchmark-platform}} $|$ \emph{Kotlin / Java}}{}
+    \resumeItemListStart
+        \resumeItem{Developed a comprehensive system benchmarking Android application with 10+ performance tests, \textbf{real-time monitoring}, and \textbf{background processing} optimized for efficiency.}
+        \resumeItem{Implemented thermal management, resource throttling detection, and battery-aware scheduling — 25K+ Play Store installs, 63 GitHub stars.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Guru Tegh Bahadur Institute of Technology}{New Delhi, IN}
+    {B.Tech in Information Technology}{Nov 2022 -- May 2026}
+    \resumeSubItem{CGPA: 8.6 $|$ JEE Mains qualified $|$ GDSC Design Department}
+\resumeSubHeadingListEnd
+
+% ----------- ACHIEVEMENTS -----------
+\section{Achievements}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{Open Source:} 2.6K+ Commits, 275 Stars, 84 Public Repositories, 76 Followers on GitHub.}
+  \resumeItem{\textbf{DSA Practice:} 150+ LeetCode, 30+ Codeforces, 200+ Coding Blocks problems — strong foundation in algorithms and data structures.}
+  \resumeItem{\textbf{Google Play:} Published 5+ Android applications — 25,000+ installs, 4.2/5 average rating.}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
