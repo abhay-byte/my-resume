@@ -15,7 +15,6 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -37,9 +36,8 @@
 
 % Section formatting
 \titleformat{\section}{
-  \vspace{-4pt}\bfseries\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-\titlespacing*{\section}{0pt}{8pt}{8pt}
 
 % Ensure generated PDF is ATS-friendly
 \pdfgentounicode=1
@@ -56,12 +54,6 @@
     \textit{\small #3} & \textit{\small #4} \\
   \end{tabular*}\vspace{-7pt}
 }
-\newcommand{\resumeLinkedSubheading}[5]{
-  \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \href{#5}{\textbf{#1} $|$ \normalfont #3 \faExternalLink} & \textit{\small #2} \quad \textit{\small #4} \\
-  \end{tabular*}\vspace{-7pt}
-}
 \newcommand{\resumeSubSubheading}[2]{
   \item
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -76,9 +68,7 @@
 }
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=10pt, topsep=0pt, parsep=0pt]}
-\newcommand{\resumeSubHeadingListStartCompact}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=4pt, topsep=0pt, parsep=0pt]}
-\newcommand{\resumeSubHeadingListStartMedium}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=5pt, topsep=0pt, parsep=0pt]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -95,86 +85,92 @@
   \href{https://github.com/abhay-byte}{\underline{github.com/abhay-byte}} $|$
   \href{https://abhay-byte.web.app/}{\underline{abhay-byte.web.app}}
 \end{center}
-\vspace{-10pt}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\resumeSubHeadingListStart
+  \resumeItem{Agentic AI Engineer and Full-Stack Product Builder who orchestrates 10+ specialized agents in parallel — spinning them up fast, equipping each with complete context, and letting them autonomously close the loop on complex issues end-to-end. I design MCP-native developer tools, architect multi-agent workflows, and ship production systems where LLMs operate as real coworkers, not toys. Passionate about open-source ecosystem — with 2.6K+ commits across 84 repositories, 290 stars, and 83 followers.}
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+  \resumeItem{\textbf{AI \& Agentic Engineering}: LLM Orchestration, Multi-Agent Systems, Model Context Protocol (MCP), Prompt Engineering, RAG, AI Workflows, Vibe Coding, Safe AI Usage, TensorFlow, OpenAI API, Gemini API, Streamlit}
+  \resumeItem{\textbf{Languages}: Python, Rust, TypeScript, JavaScript, Java, Kotlin, C++, PHP, Shell, SQL}
+  \resumeItem{\textbf{Frameworks \& Frontend}: React, Next.js, Tauri, Node.js, Express, Django, Flask, Laravel, TailwindCSS, Material-UI}
+  \resumeItem{\textbf{Cloud \& DevOps}: AWS, GCP, Docker, Git, Vercel, Linux Administration, GitHub Actions, Cron Jobs}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+    \resumeSubheading
+    {Avalon Information Systems}{Jan 2026 -- Jun 2026}
+    {Backend Developer}{New Delhi, IN}
+    \resumeItemListStart
+        \resumeItem{Contributed to \textbf{OpenEMIS}, an open-source Education Management Information System used globally for managing student data and institutional records.}
+        \resumeItem{Utilized \textbf{PHP (Laravel \& CakePHP)} to build and optimize scalable backend services for OpenEMIS Core and School modules, ensuring high performance.}
+        \resumeItem{Collaborated with a global team to enhance system reliability and data processing capabilities for national-level education deployments.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Gamified}{Jul 2023 -- Sep 2023}
+    {Game Developer Intern}{}
+    \resumeItemListStart
+        \resumeItem{Developed and implemented user interfaces for over 10 game scenes with 100\% design accuracy using C\# and Unity, reducing iteration time by 25\%.}
+        \resumeItem{Refactored core game mechanics into modular, reusable components, improving code maintainability and reducing complexity by 20\%.}
+        \resumeItem{Collaborated with a team of artists and designers to integrate assets and ensure alignment with gameplay requirements.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+    \resumeProjectHeading{\href{https://github.com/abhay-byte/fluxlinux}{\small\textbf{fluxlinux}} $|$ \emph{Kotlin}}{}
+    \resumeItemListStart
+        \resumeItem{A Kotlin-powered Linux environment manager for Android, providing seamless developer tooling directly on mobile devices with automated setup and shell integration.}
+        \resumeItem{Earned 100 stars on GitHub with strong community adoption in the Android/Linux development ecosystem.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading{\href{https://github.com/abhay-byte/finalbenchmark-platform}{\small\textbf{finalbenchmark-platform}} $|$ \emph{Kotlin}}{}
+    \resumeItemListStart
+        \resumeItem{Created a comprehensive CPU benchmarking tool for Android with 10+ customized performance tests for single-core and multi-core assessment.}
+        \resumeItem{Implemented real-time thermal management and monitoring to prevent throttling during intensive stress tests, ensuring accurate scoring.}
+        \resumeItem{Optimized for battery efficiency and low-overhead background processing; achieved widespread adoption on F-Droid.}
+        \resumeItem{Earned 69 stars on GitHub with an active open-source community.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading{\href{https://github.com/abhay-byte/mkm}{\small\textbf{mkm}} $|$ \emph{Kotlin}}{}
+    \resumeItemListStart
+        \resumeItem{A Kotlin-based multimedia organization and processing tool for Android, built with modern architecture patterns for efficient media management.}
+        \resumeItem{Earned 40 stars on GitHub with a growing user base.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading{\href{https://github.com/abhay-byte/nexus}{\small\textbf{nexus}} $|$ \emph{TypeScript}}{}
+    \resumeItemListStart
+        \resumeItem{A multi-agent AI terminal workspace built with Tauri and React, enabling side-by-side execution of 10+ AI coding agents including Claude Code, Codex, and Gemini CLI.}
+        \resumeItem{Features agent orchestration, isolated session management, and real-time output streaming for parallel AI-assisted development workflows.}
+        \resumeItem{Earned 9 stars on GitHub as an emerging tool in the multi-agent development ecosystem.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 %-----------EDUCATION-----------
 \section{Education}
 \resumeSubHeadingListStart
   \resumeSubheading
     {Guru Tegh Bahadur Institute of Technology}{New Delhi, IN}
-    {B.Tech in Information Technology \textbf{| CGPA: 8.6}}{Nov 2022 -- May 2026}
+    {B.Tech in Information Technology}{Nov 2022 -- May 2026}
+    \resumeSubItem{CGPA: 8.6}
 \resumeSubHeadingListEnd
 
-%-----------ACHIEVEMENTS-----------
+% ----------- ACHIEVEMENTS -----------
 \section{Achievements}
-\resumeSubHeadingListStartCompact
-  \resumeItem{\textbf{DSA Practice:} \textbf{LeetCode 150+} \href{https://leetcode.com/u/abhay-byte/}{\faExternalLink}, \textbf{Codeforces 30+} \href{https://codeforces.com/profile/abhay.byte02}{\faExternalLink}, \textbf{Coding Blocks 200+} \href{https://hack.codingblocks.com/app/users/421726}{\faExternalLink} problems solved focusing on \textbf{Data Structures and Algorithms}.}
-  \resumeItem{\textbf{Google Play:} Published \textbf{5+ Android applications}, achieving over \textbf{25,000 installs} and a \textbf{4.2/5 average rating}. \href{https://play.google.com/store/apps/dev?id=4853829560344310989}{\faExternalLink}}
-  \resumeItem{\textbf{F-Droid:} Published \textbf{3+ open-source Android apps} on F-Droid with \textbf{210+ stars} and active community adoption.}
-  \resumeItem{\textbf{GitHub Stats:} \textbf{2.6K+ Commits}, \textbf{290 Stars}, \textbf{84 Public Repositories}, \textbf{83 Followers}. \href{https://github.com/abhay-byte}{\faExternalLink}}
-\resumeSubHeadingListEnd
-
-%-----------EXPERIENCE-----------
-\section{Experience}
 \resumeSubHeadingListStart
-    \resumeLinkedSubheading
-    {Avalon Information Systems}{Jan 2026 -- Jun 2026}
-    {Backend Developer}{}{https://www.openemis.org/}
-    \resumeItemListStart
-        \resumeItem{Contributed to \textbf{OpenEMIS}, a \textbf{UNESCO-backed} open-source Education Management Information System aligned with \textbf{SDG 4} (Quality Education), used \textbf{globally} for managing student data and institutional records.}
-        \resumeItem{Utilized \textbf{PHP (Laravel \& CakePHP)} to build and optimize \textbf{scalable backend services} for OpenEMIS Core and School modules, ensuring \textbf{high performance}.}
-        \resumeItem{Collaborated with a \textbf{global team} to enhance \textbf{system reliability} and \textbf{data processing} capabilities for \textbf{national-level} education deployments.}
-    \resumeItemListEnd
-
-    \resumeLinkedSubheading
-    {Gamified}{Jul 2023 -- Sep 2023}
-    {Game Developer Intern}{}{https://wismay.digital/}
-    \resumeItemListStart
-        \resumeItem{Developed and implemented \textbf{user interfaces} for over \textbf{10 game scenes} with \textbf{100\% design accuracy} using \textbf{C\# and Unity}, reducing \textbf{iteration time by 25\%}.}
-        \resumeItem{Refactored \textbf{core game mechanics} into \textbf{modular, reusable components}, improving \textbf{code maintainability} and reducing \textbf{complexity by 20\%}.}
-        \resumeItem{Collaborated with a team of \textbf{artists and designers} to integrate \textbf{assets} and ensure alignment with \textbf{gameplay requirements}.}
-    \resumeItemListEnd
-\resumeSubHeadingListEnd
-
-%-----------PROJECTS-----------
-\section{Projects}
-\resumeSubHeadingListStartMedium
-
-    \resumeProjectHeading{\href{https://github.com/abhay-byte/fluxlinux}{\small\textbf{Fluxlinux}} $|$ \emph{Kotlin} \href{https://play.google.com/store/apps/details?id=com.zenithblue.fluxlinux}{\faicon{google-play}} $|$ \href{https://f-droid.org/en/packages/com.ivarna.fluxlinux/}{\faicon{download}} $|$ \href{https://github.com/abhay-byte/fluxlinux}{\faExternalLink}}{\emph{Open Source} $|$ \faicon{star} 100}
-    \resumeItemListStart
-        \resumeItem{A Kotlin-powered Linux environment manager for Android, providing seamless developer tooling directly on mobile devices with automated setup and shell integration.}
-        \resumeItem{Earned 100 stars on GitHub with strong community adoption in the Android/Linux development ecosystem.}
-    \resumeItemListEnd
-
-    \resumeProjectHeading{\href{https://github.com/abhay-byte/finalbenchmark-platform}{\small\textbf{Finalbenchmark-platform}} $|$ \emph{Kotlin} $|$ \href{https://f-droid.org/packages/com.ivarna.finalbenchmark2}{\faicon{download}} $|$ \href{https://github.com/abhay-byte/finalbenchmark-platform}{\faExternalLink}}{\emph{Open Source} $|$ \faicon{star} 70}
-    \resumeItemListStart
-        \resumeItem{Created a comprehensive CPU benchmarking tool for Android with 10+ customized performance tests for single-core and multi-core assessment.}
-        \resumeItem{Implemented real-time thermal management and monitoring to prevent throttling during intensive stress tests, ensuring accurate scoring.}
-        \resumeItem{Optimized for battery efficiency and low-overhead background processing; achieved widespread adoption on F-Droid.}
-    \resumeItemListEnd
-
-    \resumeProjectHeading{\href{https://github.com/abhay-byte/mkm}{\small\textbf{MKM (Minimal Kernel Manager)}} $|$ \emph{Kotlin} $|$ \href{https://f-droid.org/packages/com.ivarna.mkm}{\faicon{download}} $|$ \href{https://github.com/abhay-byte/mkm}{\faExternalLink}}{\emph{Open Source} $|$ \faicon{star} 40}
-    \resumeItemListStart
-        \resumeItem{Android kernel management and system monitoring application with real-time customizable performance overlay and multiple layout modes.}
-        \resumeItem{Persistent swap file management with boot persistence, supporting Shizuku (non-root) and Root access methods.}
-        \resumeItem{CPU/GPU frequency and governor control with real-time thermal and memory monitoring.}
-    \resumeItemListEnd
-
-    \resumeProjectHeading{\href{https://github.com/abhay-byte/nexus}{\small\textbf{Nexus}} $|$ \emph{TypeScript} $|$ \href{https://github.com/abhay-byte/nexus/releases}{\faicon{download}} $|$ \href{https://github.com/abhay-byte/nexus}{\faExternalLink}}{\emph{Open Source} $|$ \faicon{star} 9}
-    \resumeItemListStart
-        \resumeItem{A multi-agent AI terminal workspace built with Tauri and React, enabling side-by-side execution of 10+ AI coding agents including Claude Code, Codex, and Gemini CLI.}
-        \resumeItem{Features agent orchestration, isolated session management, and real-time output streaming for parallel AI-assisted development workflows.}
-    \resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
-\resumeSubHeadingListStartCompact
-  \resumeItem{\textbf{AI \& Agentic Engineering}: LLM Orchestration, Multi-Agent Systems, Model Context Protocol (MCP), Prompt Engineering, RAG, AI Workflows, Knowledge Base for LLM, AI Harness, AI Tools, AI Skills, Safe AI Usage, TensorFlow, OpenAI API, Gemini API, Streamlit}
-  \resumeItem{\textbf{Languages}: Python, Rust, TypeScript, JavaScript, Java, Kotlin, C++, PHP, Shell Scripting, SQL}
-  \resumeItem{\textbf{Frameworks \& Frontend}: React, Next.js, Tauri, Node.js, Express, Django, Flask, Laravel 13, CakePHP 5, PostgreSQL, MySQL, TailwindCSS, Material-UI}
-  \resumeItem{\textbf{Cloud \& DevOps}: AWS, GCP, Docker, Git, Vercel, Linux Administration, GitHub Actions, Cron Jobs}
+  \resumeItem{\textbf{GitHub Stats:} 2.6K+ Commits, 290 Stars, 84 Public Repositories, 83 Followers.}
+  \resumeItem{\textbf{Google Play:} Published 5+ Android applications, achieving over 25,000 installs and a 4.2/5 average rating.}
+  \resumeItem{\textbf{DSA Practice:} LeetCode 150+, Codeforces 30+, Coding Blocks 200+ problems solved focusing on Data Structures and Algorithms.}
 \resumeSubHeadingListEnd
 
 %-------------------------------------------
